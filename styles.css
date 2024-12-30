@@ -412,6 +412,9 @@ button:hover {
   background-color: #0056b3;
 }
 
-.swiper-slide p {
-  margin-bottom: 10px; /* 各段落の間隔を調整 */
+@media (max-width: 768px) {
+  .swiper-slide p {
+    font-size: 14px; /* モバイル用にフォントサイズを小さくする */
+    line-height: 1.5; /* 行間を調整 */
+  }
 }
