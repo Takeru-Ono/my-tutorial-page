@@ -105,6 +105,7 @@ function nextStep() {
   }
 }
 
+
 // Move to the previous tutorial step
 function prevStep() {
   // 現在のステップが最初のステップの場合は戻らない
@@ -299,18 +300,24 @@ function initializeTutorial3() {
 
   // ハイライトボックスを初期化
   const highlightBox = document.getElementById("highlight-box3");
-  if (highlightBox && firstStep.highlightId) {
-    highlightBox.style.top = firstStep.highlightStyle.top;
-    highlightBox.style.left = firstStep.highlightStyle.left;
-    highlightBox.style.width = firstStep.highlightStyle.width;
-    highlightBox.style.height = firstStep.highlightStyle.height;
-    highlightBox.style.opacity = 1;
-    highlightBox.style.visibility = "visible";
-  } else if (highlightBox) {
+  if (highlightBox) {
+    highlightBox.style.transition = "none"; // 過去のアニメーションをリセット
+    highlightBox.style.left = "0px";
+    highlightBox.style.top = "0px";
+    highlightBox.style.width = "0px";
+    highlightBox.style.height = "0px";
     highlightBox.style.opacity = 0;
     highlightBox.style.visibility = "hidden";
   }
 
+  // 初期ステップに必要なハイライトを設定
+  if (highlightBox && firstStep.highlightId) {
+    updateHighlightBox3(firstStep.highlightStyle, {
+      animate: false,
+      show: true,
+      containerId: "tutorial-container-3",
+    });
+  }
   // 説明文を初期化
   document.getElementById("instruction3").textContent = firstStep.text;
 }
@@ -637,20 +644,26 @@ function initializeTutorial4() {
     }
   }
 
-  // ハイライトボックスを初期化
-  const highlightBox = document.getElementById("highlight-box4");
-  if (highlightBox && firstStep.highlightId) {
-    highlightBox.style.top = firstStep.highlightStyle.top;
-    highlightBox.style.left = firstStep.highlightStyle.left;
-    highlightBox.style.width = firstStep.highlightStyle.width;
-    highlightBox.style.height = firstStep.highlightStyle.height;
-    highlightBox.style.opacity = 1;
-    highlightBox.style.visibility = "visible";
-  } else if (highlightBox) {
-    highlightBox.style.opacity = 0;
-    highlightBox.style.visibility = "hidden";
-  }
-
+   // ハイライトボックスを初期化
+   const highlightBox = document.getElementById("highlight-box4");
+   if (highlightBox) {
+     highlightBox.style.transition = "none"; // 過去のアニメーションをリセット
+     highlightBox.style.left = "0px";
+     highlightBox.style.top = "0px";
+     highlightBox.style.width = "0px";
+     highlightBox.style.height = "0px";
+     highlightBox.style.opacity = 0;
+     highlightBox.style.visibility = "hidden";
+   }
+ 
+   // 初期ステップに必要なハイライトを設定
+   if (highlightBox && firstStep.highlightId) {
+     updateHighlightBox4(firstStep.highlightStyle, {
+       animate: false,
+       show: true,
+       containerId: "tutorial-container-4",
+     });
+   }
   // 説明文を初期化
   document.getElementById("instruction4").textContent = firstStep.text;
 }
@@ -917,16 +930,23 @@ function initializeTutorial5() {
 
   // ハイライトボックスを初期化
   const highlightBox = document.getElementById("highlight-box5");
-  if (highlightBox && firstStep.highlightId) {
-    highlightBox.style.top = firstStep.highlightStyle.top;
-    highlightBox.style.left = firstStep.highlightStyle.left;
-    highlightBox.style.width = firstStep.highlightStyle.width;
-    highlightBox.style.height = firstStep.highlightStyle.height;
-    highlightBox.style.opacity = 1;
-    highlightBox.style.visibility = "visible";
-  } else if (highlightBox) {
+  if (highlightBox) {
+    highlightBox.style.transition = "none"; // 過去のアニメーションをリセット
+    highlightBox.style.left = "0px";
+    highlightBox.style.top = "0px";
+    highlightBox.style.width = "0px";
+    highlightBox.style.height = "0px";
     highlightBox.style.opacity = 0;
     highlightBox.style.visibility = "hidden";
+  }
+
+  // 初期ステップに必要なハイライトを設定
+  if (highlightBox && firstStep.highlightId) {
+    updateHighlightBox5(firstStep.highlightStyle, {
+      animate: false,
+      show: true,
+      containerId: "tutorial-container-5",
+    });
   }
 
   // 説明文を初期化
@@ -986,6 +1006,20 @@ if (nextStep.highlightId) {
     document.getElementById("instruction5").textContent = nextStep.text;
   } else {
     swiper.slideNext();
+
+        // スライド5のステップを強制的にリセット
+        tutorial6CurrentStep = -1; // 初期状態にリセット
+
+        // スライド4の初期化を一度だけ呼び出す
+        setTimeout(() => {
+          if (tutorial6CurrentStep === -1) {
+            initializeTutorial6();
+          } else {
+            console.log("Tutorial 6 is already initialized.");
+          }
+        }, 300); // 適切な遅延時間を設定 (例: 500ms)
+
+
   }
 }
 
@@ -1195,16 +1229,23 @@ function initializeTutorial6() {
 
   // ハイライトボックスを初期化
   const highlightBox = document.getElementById("highlight-box6");
-  if (highlightBox && firstStep.highlightId) {
-    highlightBox.style.top = firstStep.highlightStyle.top;
-    highlightBox.style.left = firstStep.highlightStyle.left;
-    highlightBox.style.width = firstStep.highlightStyle.width;
-    highlightBox.style.height = firstStep.highlightStyle.height;
-    highlightBox.style.opacity = 1;
-    highlightBox.style.visibility = "visible";
-  } else if (highlightBox) {
+  if (highlightBox) {
+    highlightBox.style.transition = "none"; // 過去のアニメーションをリセット
+    highlightBox.style.left = "0px";
+    highlightBox.style.top = "0px";
+    highlightBox.style.width = "0px";
+    highlightBox.style.height = "0px";
     highlightBox.style.opacity = 0;
     highlightBox.style.visibility = "hidden";
+  }
+
+  // 初期ステップに必要なハイライトを設定
+  if (highlightBox && firstStep.highlightId) {
+    updateHighlightBox6(firstStep.highlightStyle, {
+      animate: false,
+      show: true,
+      containerId: "tutorial-container-6",
+    });
   }
 
   // 説明文を初期化
