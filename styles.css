@@ -400,15 +400,18 @@ button:hover {
 }
 /* ボタン配置 */
 #prev-button6 {
-  left: 30%; /* 左寄りから少し中央寄りに配置 */
-  bottom: 35%; /* Instructionの下に配置 */
+  left: 20%; /* 左寄りから少し中央寄りに配置 */
+  bottom: 30%; /* Instructionの下に配置 */
 }
 
 #next-button6 {
-  right: 30%; /* 右寄りから少し中央寄りに配置 */
-  bottom: 35%; /* Instructionの下に配置 */
+  right: 20%; /* 右寄りから少し中央寄りに配置 */
+  bottom: 30%; /* Instructionの下に配置 */
 }
 #prev-button6:hover, #next-button6:hover {
   background-color: #0056b3;
 }
 
+.swiper-slide p {
+  margin-bottom: 10px; /* 各段落の間隔を調整 */
+}
