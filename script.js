@@ -13,7 +13,7 @@ const steps = [
   { relativeX: 0.52, relativeY: 0.03, relativeWidth: 0.41, relativeHeight: 0.35, text: "ここでは、韓国語の音声付きで問題が出題されます。それに当てはまる日本語を答えるクイズです。" },
   { relativeX: 0.06, relativeY: 0.85, relativeWidth: 0.27, relativeHeight: 0.075, text: "収録されている単語はここで確認することができます。" },
   { relativeX: 0.36, relativeY: 0.85, relativeWidth: 0.27, relativeHeight: 0.075, text: "設定では、タイムアタックと数字クイズの時間制限を2−10秒でそれぞれ選択することができます。" }, // 新しいステップ4
-  { relativeX: 0.65, relativeY: 0.85, relativeWidth: 0.27, relativeHeight: 0.075, text: "ここでは、お問い合わせや、ライセンス情報などを確認できます。このチュートリアルもここからいつでも見ることができます。" }, // 新しいステップ5
+  { relativeX: 0.65, relativeY: 0.85, relativeWidth: 0.27, relativeHeight: 0.075, text: "ここでは、お問い合わせや、ライセンス情報などを確認できます。" }, // 新しいステップ5
   { relativeX: 0.06, relativeY: 0.105, relativeWidth: 0.41, relativeHeight: 0.075, text: "まずはゆっくりモードを詳しく見ていきましょう。" } // 新しいステップ5
 ];
 
